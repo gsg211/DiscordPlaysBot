@@ -5,6 +5,7 @@ import discord_plays
 import help
 import json
 import pyttsx3
+import keyboard
 
 intents = discord.Intents.all()
 bot = commands.Bot('.', intents=intents)
@@ -66,7 +67,7 @@ async def on_message(message):
         # for good courtesy
         await message.channel.send("With pleasure")
 
-    discord_plays.play_mario(command)
+    await discord_plays.play_mario(command)
 
     # you can add as many games as you'd like in the discord_plays file
 
@@ -78,3 +79,4 @@ if __name__ == '__main__':
     channel_id = int(file["startchannelid"])
     f.close()
     bot.run(token)
+

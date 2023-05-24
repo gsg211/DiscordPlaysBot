@@ -2,28 +2,28 @@ import time
 from games import mario
 
 
-def play_mario(message_value):
+async def play_mario(message_value):
     if message_value == 'jump':
-        mario.jump()
+        await mario.jump()
     if message_value == 'left':
-        mario.left()
+        await mario.left()
     if message_value == 'lightleft':
-        mario.lightleft()
+        await mario.lightleft()
     if message_value == 'right':
-        mario.right()
+        await mario.right()
     if message_value == 'lightright':
-        mario.lightright()
+        await mario.lightright()
     if message_value == 'start':
-        mario.start()
+        await mario.start()
     if message_value == 'stop':
-        mario.stop()
+        await mario.stop()
     if message_value == 'rump':
-        mario.rump()
+        await mario.rump()
     if message_value == 'lump':
-        mario.lump()
+        await mario.lump()
     if message_value == 'sprint':
-        mario.sprint()
+        await mario.sprint()
     if message_value == 'stopsprint':
-        mario.stopsprint()
+        await mario.stopsprint()
     if message_value == 'fire':
-        mario.stopsprint()
+        await mario.stopsprint()
