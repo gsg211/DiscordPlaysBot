@@ -1,4 +1,4 @@
-import time
+import asyncio
 import discord
 from discord.ext import commands
 import discord_plays
@@ -26,15 +26,15 @@ async def countdown():
     await startchannel.send("3")
     tts.say('3')
     tts.runAndWait()
-    time.sleep(1)
+    await asyncio.sleep(1)
     await startchannel.send("2")
     tts.say('2')
     tts.runAndWait()
-    time.sleep(1)
+    await asyncio.sleep(1)
     await startchannel.send("1")
     tts.say('1')
     tts.runAndWait()
-    time.sleep(1)
+    await asyncio.sleep(1)
     await startchannel.send("GOOOOO")
     tts.say('GOOOOO')
     tts.runAndWait()

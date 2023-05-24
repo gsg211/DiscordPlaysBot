@@ -1,70 +1,70 @@
 import keyboard
-import time
+import asyncio
 
 
-def jump():
+async def jump():
     keyboard.press("space")
-    time.sleep(1)
+    await asyncio.sleep(1)
     keyboard.release("space")
 
 
-def left():
+async def left():
     keyboard.press("a")
-    time.sleep(0.8)
+    await asyncio.sleep(0.8)
     keyboard.release("a")
 
 
-def lightleft():
+async def lightleft():
     keyboard.press("a")
-    time.sleep(0.25)
+    await asyncio.sleep(0.25)
     keyboard.release("a")
 
 
-def right():
+async def right():
     keyboard.press("d")
-    time.sleep(0.8)
+    await asyncio.sleep(0.8)
     keyboard.release("d")
 
 
-def lightright():
+async def lightright():
     keyboard.press("d")
-    time.sleep(0.25)
+    await asyncio.sleep(0.25)
     keyboard.release("d")
 
 
-def start():
+async def start():
     keyboard.press("d")
 
 
-def stop():
+async def stop():
     keyboard.release("d")
 
 
-def sprint():
+async def sprint():
     keyboard.press("shift")
 
 
-def stopsprint():
+async def stopsprint():
     keyboard.release("shift")
 
 
-def rump():
+async def rump():
     keyboard.press('d')
-    time.sleep(0.2)
+    await asyncio.sleep(0.2)
     keyboard.press('space')
-    time.sleep(1)
+    await asyncio.sleep(1)
     keyboard.release('space')
     keyboard.release('d')
 
 
-def lump():
+async def lump():
     keyboard.press('a')
-    time.sleep(0.2)
+    await asyncio.sleep(0.2)
     keyboard.press('space')
-    time.sleep(1)
+    await asyncio.sleep(1)
     keyboard.release('space')
     keyboard.release('a')
 
 
-def fire():
+async def fire():
     keyboard.press_and_release('shift')
