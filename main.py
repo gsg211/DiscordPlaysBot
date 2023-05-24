@@ -5,7 +5,7 @@ import discord_plays
 import help
 import json
 import pyttsx3
-import keyboard
+import random
 
 intents = discord.Intents.all()
 bot = commands.Bot('.', intents=intents)
@@ -66,8 +66,8 @@ async def on_message(message):
     if command == "thx":
         # for good courtesy
         await message.channel.send("With pleasure")
-
-    await discord_plays.play_mario(command)
+    if random.randint(0, 100) < chance:
+        await discord_plays.play_mario(command)
 
     # you can add as many games as you'd like in the discord_plays file
 
@@ -77,6 +77,6 @@ if __name__ == '__main__':
     file = json.load(f)
     token = file["token"]
     channel_id = int(file["startchannelid"])
+    chance = int(file["chance"])
     f.close()
     bot.run(token)
-
